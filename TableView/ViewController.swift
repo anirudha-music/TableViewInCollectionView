@@ -53,6 +53,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TableCollectionCell", for: indexPath) as! TableCollectionCell
         cell.tableView.tag = indexPath.row
+        cell.tableView.reloadData()
         return cell
     }
     
